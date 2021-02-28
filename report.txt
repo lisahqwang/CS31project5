@@ -1,0 +1,46 @@
+report for project 5
+name: Lisa Wang 
+UID: 105502901 
+class: CS31 Huang 
+
+a brief description of notable obstacles I overcame: 
+I had trouble understanding the specific procedures mentioned by the specs. For example, I didn't understand that I must subtract the mileage for the free flight from the balance. 
+Another instance was I didn't know how to write the format for the .h files, but I fixed this problem when I revisited the lecture
+Another instance was I didn't know when I should put flight. in front of the getter methods (mutator methods). This was fixed when I realized some getter methods don't need a leading object. 
+
+A list of test data that could be used to thoroughly test your functions
+
+PlaneFlight Franklin("Benjamin", "SFO", "SJC", 50.0, 50); 
+Franklin.getFromCity() == "SFO"
+//this tests if my getFromCity is working, that the function does not see this as an empty string and whenever this function is called somewhere else in the program, you may yield the same result. 
+
+Franklin.getFromCity() == ""; 
+//tests if empty string can be taken 
+
+Franklin.getToCity() == "SFC"; Franklin.setToCity("SFO");
+//tests if my getToCity is working, and that my setToCity is also taken into as a form of a string. 
+
+Franklin.getToCity() == ""; 
+//tests if empty string can be taken in 
+
+std::to_string(Franklin.getCost()) == "50.0000") 
+std::to_string(Franklin.getMileage()) == "285.0000") 
+//tests if basic functionalities are met 
+
+FrequentFlyerAccount account1("Lisa"); 
+//creates an instance of FrequentFlyerAccount class
+
+account1.freeFlight("SJC", "SJC", 50, sample) == false
+//this makes the case where the FromCity and ToCity 
+are the same, then this would be outputting false by previous getToCity and getFromCity rules.
+account1.freeFlight("JFK", "SFO", 50, sample) == true 
+
+//this makes the case where the above conditions, where each passed parameter are not only recognized as valid parameters, but also used in the function are 
+met. 
+account1.addFlightToAccount(Franklin) == true
+
+// adds to present balance successfully, and computes the conditional and returns true upon recognizing that the flight is a valid flight. 
+account1.canEarnFreeFlight(400) == false
+
+// checks if the mileage exceeds the balance, if so, then can not have free flight. 
+
